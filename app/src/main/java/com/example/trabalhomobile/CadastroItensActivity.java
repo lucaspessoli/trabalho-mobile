@@ -45,28 +45,28 @@ public class CadastroItensActivity extends AppCompatActivity {
 
     }
     private void salvarItem(EditText codigoItem, EditText descricao, EditText valorUnitario) {
-        if (codigoItem.getText().toString().isEmpty() || valorUnitario.getText().toString().isEmpty() || descricao.getText().toString().isEmpty()) {
-            if (codigoItem.getText().toString().isEmpty()) {
-                codigoItem.setError("Preencha o campo!");
-            }
-            if (valorUnitario.getText().toString().isEmpty()) {
-                valorUnitario.setError("Preencha o campo!");
-            }
-            if (descricao.getText().toString().isEmpty()) {
-                descricao.setError("Preencha o campo!");
-            }
-        } else {
-            int codigo = Integer.parseInt(codigoItem.getText().toString());
-            double valor = Double.parseDouble(valorUnitario.getText().toString());
-            Item item = new Item();
-            item.setCodigoItem(codigo);
-            item.setValorUnitarioItem(valor);
-            item.setDescricaoItem(descricao.getText().toString());
-            Controller.getInstance().salvarItem(item);
-            codigoItem.setText("");
-            descricao.setText("");
-            valorUnitario.setText("");
+        if (codigoItem.getText().toString().isEmpty()) {
+            codigoItem.setError("Preencha o campo!");
+            return;
         }
+        if (valorUnitario.getText().toString().isEmpty()) {
+            valorUnitario.setError("Preencha o campo!");
+            return;
+        }
+        if (descricao.getText().toString().isEmpty()) {
+            descricao.setError("Preencha o campo!");
+            return;
+        }
+        int codigo = Integer.parseInt(codigoItem.getText().toString());
+        double valor = Double.parseDouble(valorUnitario.getText().toString());
+        Item item = new Item();
+        item.setCodigoItem(codigo);
+        item.setValorUnitarioItem(valor);
+        item.setDescricaoItem(descricao.getText().toString());
+        Controller.getInstance().salvarItem(item);
+        codigoItem.setText("");
+        descricao.setText("");
+        valorUnitario.setText("");
     }
 
     public void atualizarItem(){

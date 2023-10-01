@@ -46,19 +46,20 @@ public class CadastroClienteActivity extends AppCompatActivity {
         });
     }
 
-    public void salvarCliente(TextView nome, TextView cpf){
+    private void salvarCliente(TextView nome, TextView cpf){
         Cliente cliente = new Cliente();
-        if(!nome.getText().toString().isEmpty() && !cpf.getText().toString().isEmpty()){
-            cliente.setNome(nome.getText().toString());
-            cliente.setCpf(cpf.getText().toString());
-            Controller.getInstance().salvarCliente(cliente);
+        if(nome.getText().toString().isEmpty()){
+            nome.setError("Preencha o campo!");
+            return;
         }
-        else if(nome.getText().toString().isEmpty()){
-            nome.setError("O nome está vazio!");
+        if(cpf.getText().toString().isEmpty()){
+            cpf.setError("Preencha o campo!");
+            return;
         }
-        else if(cpf.getText().toString().isEmpty()){
-            cpf.setError("O CPF está vazio!");
-        }
+        cliente.setNome(nome.getText().toString());
+        cliente.setCpf(cpf.getText().toString());
+        Controller.getInstance().salvarCliente(cliente);
+
     }
 
     public void atualizarCliente(){
