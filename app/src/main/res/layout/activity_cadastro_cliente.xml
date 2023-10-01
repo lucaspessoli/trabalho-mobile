@@ -7,6 +7,7 @@
     tools:context=".CadastroClienteActivity"
     android:orientation="vertical">
 
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,4 +29,17 @@
         android:id="@+id/btCadastrar"
         />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:id="@+id/btVoltar"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvClientes"
+        />
 </LinearLayout>
