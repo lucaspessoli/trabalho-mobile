@@ -11,24 +11,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Código do item"
+        android:id="@+id/edCodigoItem"
         />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Descrição do item"
+        android:id="@+id/edDescricaoItem"
         />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Valor unitário do item"
+        android:id="@+id/edValorUnitarioItem"
         />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Cadastrar"
+        android:id="@+id/btCadastrarItem"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:id="@+id/btVoltarMenu"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvListaItem"
         />
 
 </LinearLayout>
