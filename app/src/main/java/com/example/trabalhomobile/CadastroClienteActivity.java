@@ -59,7 +59,6 @@ public class CadastroClienteActivity extends AppCompatActivity {
         cliente.setNome(nome.getText().toString());
         cliente.setCpf(cpf.getText().toString());
         Controller.getInstance().salvarCliente(cliente);
-
     }
 
     public void atualizarCliente(){

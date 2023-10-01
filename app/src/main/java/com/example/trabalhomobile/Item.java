@@ -1,9 +1,25 @@
 package com.example.trabalhomobile;
 
 public class Item {
-    private int codigoItem;
+    private int codigoItem, quantidade;
     private String descricaoItem;
-    private double valorUnitarioItem;
+    private double valorUnitarioItem, valorTotal;
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public double getValorTotal() {
+        return valorTotal;
+    }
+
+    public void setValorTotal(double valorTotal) {
+        this.valorTotal = valorTotal;
+    }
 
     public int getCodigoItem() {
         return codigoItem;
