@@ -7,6 +7,7 @@ public class Controller {
     private static Controller instancia;
     private ArrayList<Cliente> listaCliente;
     private ArrayList<Item> listaItens;
+    private ArrayList<Pedido> listaPedido;
 
     public static Controller getInstance(){
         if(instancia == null){
@@ -25,6 +26,9 @@ public class Controller {
     public void salvarItem(Item item){
         listaItens.add(item);
     }
+    public void salvarPedido(Pedido pedido){
+        listaPedido.add(pedido);
+    }
 
     public ArrayList<Cliente> retornarCliente(){
         return listaCliente;
@@ -32,6 +36,11 @@ public class Controller {
     public ArrayList<Item> retornarItem(){
         return listaItens;
     }
+
+    public ArrayList<Pedido> retornarPedido(){
+        return listaPedido;
+    }
+
 
 
 

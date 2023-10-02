@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         btLancamentoPedido.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                abrirActivity(LancamentoPedidoActivity.class);
             }
         });
     }
