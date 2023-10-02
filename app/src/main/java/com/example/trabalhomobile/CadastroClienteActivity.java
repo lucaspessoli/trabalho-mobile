@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -59,6 +60,10 @@ public class CadastroClienteActivity extends AppCompatActivity {
         cliente.setNome(nome.getText().toString());
         cliente.setCpf(cpf.getText().toString());
         Controller.getInstance().salvarCliente(cliente);
+        nome.setText("");
+        cpf.setText("");
+        Toast.makeText(this, "Sucesso!\n Cliente cadastrado com sucesso!", Toast.LENGTH_LONG).show();
+
     }
 
     public void atualizarCliente(){

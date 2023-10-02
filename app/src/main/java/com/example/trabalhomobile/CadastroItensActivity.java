@@ -8,10 +8,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.Random;
 
 public class CadastroItensActivity extends AppCompatActivity {
 
-    private Button btCadastrarItem, btVoltar;
+    private Button btCadastrarItem, btVoltar, btGerarCodigo;
     private EditText edCodigoItem, edDescricaoItem, edValorUnitarioItem;
     private TextView tvListaItem;
 
@@ -22,6 +25,7 @@ public class CadastroItensActivity extends AppCompatActivity {
 
         btCadastrarItem = findViewById(R.id.btCadastrarItem);
         btVoltar = findViewById(R.id.btVoltarMenu);
+        btGerarCodigo = findViewById(R.id.btGerarCodigo);
         edCodigoItem = findViewById(R.id.edCodigoItem);
         edDescricaoItem = findViewById(R.id.edDescricaoItem);
         edValorUnitarioItem = findViewById(R.id.edValorUnitarioItem);
@@ -40,6 +44,15 @@ public class CadastroItensActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 abrirActivity(MainActivity.class);
+            }
+        });
+
+        btGerarCodigo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Random random = new Random();
+                int numeroAleatorio = random.nextInt(100000) + 1;
+                edCodigoItem.setText(String.valueOf(numeroAleatorio));
             }
         });
 
@@ -67,6 +80,7 @@ public class CadastroItensActivity extends AppCompatActivity {
         codigoItem.setText("");
         descricao.setText("");
         valorUnitario.setText("");
+        Toast.makeText(this, "Sucesso!\n Item adicionado com sucesso!", Toast.LENGTH_LONG).show();
     }
 
     public void atualizarItem(){

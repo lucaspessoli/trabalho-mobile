@@ -19,6 +19,7 @@ public class Controller {
     private Controller() {
         listaCliente = new ArrayList<>();
         listaItens = new ArrayList<>();
+        listaPedido = new ArrayList<>();
     }
     public void salvarCliente(Cliente cliente){
         listaCliente.add(cliente);

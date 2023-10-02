@@ -7,6 +7,15 @@
     tools:context=".LancamentoPedidoActivity"
     android:orientation="vertical">
 
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,12 +48,13 @@
             android:layout_height="wrap_content"
             android:id="@+id/spItem"
             />
+
         <EditText
+            android:id="@+id/edQuantidadeItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Quantidade"
-            android:id="@+id/edQuantidadeItem"
-            />
+            android:hint="Quantidade" />
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -70,23 +80,31 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tvItensAdicionados"
             android:text="debug"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvValorTotal"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvQuantidadeTotal"
             />
 
     </LinearLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Pagamento:"
-        />
 
     <RadioGroup
         android:layout_width="match_parent"
@@ -111,6 +129,32 @@
 
     </RadioGroup>
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Insira a sua parcela"
+        android:id="@+id/edParcela"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcular valor total"
+        android:id="@+id/btValorTotal"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvValorTotalP"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvListaParcelas"
+        />
+
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -133,6 +177,6 @@
         android:layout_marginTop="10dp"
         android:id="@+id/btVoltarMenuPedido"
         android:text="Voltar" />
-
-
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

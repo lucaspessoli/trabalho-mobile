@@ -7,12 +7,7 @@
     tools:context=".CadastroItensActivity"
     android:orientation="vertical">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Código do item"
-        android:id="@+id/edCodigoItem"
-        />
+
 
     <EditText
         android:layout_width="match_parent"
@@ -26,6 +21,20 @@
         android:layout_height="wrap_content"
         android:hint="Valor unitário do item"
         android:id="@+id/edValorUnitarioItem"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Código do item"
+        android:id="@+id/edCodigoItem"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gerar código"
+        android:id="@+id/btGerarCodigo"
         />
 
     <Button
